@@ -1,0 +1,434 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+   
+}
+
+.header{
+    /* position: relative; */
+    left: 0;
+    top: 0;
+    background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+}
+.header img{
+
+     /* position: fixed; */
+    width: 100%;
+    height: 100vh;
+}
+.container1{
+    
+    width: 100%;
+    /* height: 1000px; */
+    position: absolute;
+    top: 100vh;
+    left: 0;
+}
+ .about{
+    padding-top: 200px;
+   display: inline-flex;
+   width: 100%;
+   height: 400px;
+}
+
+.about .content{
+    height: 400px;
+    width: 60%;
+    text-align: center;
+}
+.about .content h3{
+    text-decoration: underline;
+}
+
+.about .content p{
+    margin-top: 15px;
+    line-height: 30px;
+}
+.about .about-box{
+    height: 400px;
+    width: 30%;
+    justify-content: center;
+    text-align: center;
+}
+/* .about .cardbox{
+    height: 400px;
+    width: 30%;
+    justify-content: center;
+    text-align: center;
+} */
+.about .cardbox {
+    height: 300px;
+    width: 250px;
+    position: relative; 
+    margin-left: 100px;
+}
+.about .cardbox.front{
+    transform: perspective(600px) rotateY(0deg);
+    backface-visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    transition: transform .6s linear;
+}
+.about .cardbox .front img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.about .cardbox:hover > .front{
+    transform: perspective(600px) rotateY(-180deg);
+}
+.about .cardbox:hover > .back{
+    transform: perspective(600px) rotateY(0deg);
+}
+.about .cardbox .back{
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #f1f1f1;
+    transform: perspective(600px) rotateY(180deg);
+    overflow: hidden;
+    transition: transform .6s linear;
+
+
+}
+
+.about .about-box img{
+    height: 300px;
+    width: 250px;
+}
+.about .about-box:hover{
+    transform-style: preserve-3d;
+    perspective: 2000px;
+    transform: rotatey(180deg);
+    transition: 1s;
+}
+.portfolio{
+    margin-top: 40px;
+    width: 100%;
+    position: relative;
+    height: 600px;
+}
+.portfolio .text-box{
+    margin-bottom: 30px;
+}
+.portfolio .text-box h3{
+    text-decoration: underline;
+   text-align: center;
+}
+/* .portfolio .content{
+   text-align: center;
+}
+.portfolio .content .img{
+    height: 250px;
+    width: 250px;
+    position: relative;
+    display: inline-flex;
+    margin: 20px;
+}
+.portfolio .content img{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+    padding: 20px;
+    text-align: center;
+    opacity: 1;
+}
+.portfolio .content img:hover{
+    opacity: .5;
+} */
+.my-services{
+    display: inline-flex;
+    width: 100%;
+    height: 300px;
+    padding-top: 60px;
+    justify-content: center;
+    position: relative;
+}
+.my-services .left-box{
+    width: 70%;
+    text-align: center;
+    line-height: 20px;
+    padding: 40px;
+}
+.my-services .left-box h3{
+    text-decoration: underline;
+    margin-bottom: 30px;
+}
+.my-services .right-box{
+    width: 25%;
+    margin-left: 50px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+    justify-content: center;
+    line-height: 30px;
+}
+.fixed-img{
+   background: url(./images/pexels-photo-310435.jpeg) repeat  100%;
+   background-attachment: fixed;
+}
+.fixed-img .fixed-inner{
+   padding-top:17%;
+    
+}
+.exp{
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+}
+.exp .content{
+   padding-top: 80px;
+   line-height: 25px;
+
+}
+.exp .content h3{
+    padding-bottom: 20px;
+    text-decoration: underline;
+}
+.exp .content i{
+    font-size: 25px;
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    padding: 10px;
+
+}
+.exp .content i:hover{
+       border-radius: 50px;
+       background-color: #f1f1f1;
+       color: #fff;
+}
+.exp .bottom{
+    width: 100%;
+    height: 30px;
+    background: black;
+    color: lightgray;
+    font-size: 12px;
+    justify-content: center;
+    padding-top: 8px;
+}
+/* .portfolio .content{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+} */
+.container{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 1280;
+    height: 500px;
+   display: flex;
+   margin: 70px 0 auto; 
+   flex-direction: row;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+ }
+ .container .card{
+     position: relative;
+     width: 200px;
+     height: 200px;
+    background: yellow;
+    margin: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+ 
+ }
+ .container .card .Imgbox{
+     position: absolute;
+     overflow: hidden;
+    
+ }
+ .container .card .Imgbox img{
+     height: 200px;
+     width: 200px;
+     transition: transform 2s;
+ }
+ 
+ .container .card:hover .Imgbox img{
+     transform: scale(1.2);
+ }
+ .container .card .Textbox{
+     position: absolute;
+     top: 10px;
+     left: 10px;
+     right: 10px;
+     bottom: 10px;
+     background: rgba(0, 0, 0, .8);
+     transform: scaleY(0);
+     transition: transform .5s;
+ }
+ 
+ .container .card:hover .Textbox{
+     transform: scaleY(1);
+ } 
+ 
+ .container .card .Textbox .content{
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     text-align: center;
+     justify-content: center;
+     color: #fff;
+ }
+ 
+ .container .card .Textbox .content h1{
+     font-size: 20px;
+ }
+ 
+ .container .card .Textbox .content p{
+     font-size: 12px;
+ }
+ .banner1,.banner2,.banner3,.banner4{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* background-size: cover; */
+}
+.banner-img img{
+    width: 120%;
+    height: 120%;
+    position: absolute;
+    /* left: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%); */
+   
+    animation: zoomout 3s linear infinite;
+}
+@keyframes zoomout{
+   100%{
+       width: 100%;
+       /* height: 100%; */
+   }
+}
+.bannerX{
+    overflow: hidden;
+}
+.text-box0{
+    position: absolute;
+    top: 300px;
+    left: 100px;
+    color: white;
+    transform: translateY(100px);   
+    animation: up 12s linear infinite;
+}
+
+.text-box0 p{
+    font-size: 14px;
+}
+.banner1{
+    animation: slide1 12s linear infinite;
+}
+.banner2{
+    animation: slide2 12s linear infinite;
+}
+.banner3{
+    animation: slide3 12s linear infinite;
+}
+.banner4{
+    animation: slide4 12s linear infinite;
+}
+
+@keyframes slide1{
+    0%{
+        visibility: visible;
+    }
+   25%{
+       visibility: hidden;
+   }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible;
+    }
+    
+}
+@keyframes slide2{
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: visible;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: hidden;
+    }
+    
+}
+@keyframes slide3{
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: visible;
+    }
+    100%{
+        visibility: hidden;
+    }
+    
+}
+@keyframes slide4{
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible;
+    }
+    
+}
+@keyframes up{
+    10%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.text-box1{
+    animation-delay: 0s;
+}
+.text-box2{
+    animation-delay: 3s;
+}
+.text-box3{
+    animation-delay: 6s;
+}
+.text-box4{
+    animation-delay: 9s;
+}
